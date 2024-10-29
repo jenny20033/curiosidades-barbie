@@ -755,21 +755,25 @@ Por: Jennyfer
 .comment-box button:active {
     background-color: #000000;
 }
-</style>
-</head>
-<body>
-<div class="comment-box">
-<h2>E ai, gostaram deste post? <P></P> comente aqui! <h2> &#128151;</h2>
-<form function adicionarComentario() method="post">
-    <label for="nome">Seu Nome:</label>
-    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"><br>
-    <label for="comentario">Seu Comentário:</label>
-    <textarea id="comentario" name="comentario" required placeholder="Digite seu comentário"></textarea><br>
-    <button type="submit">Enviar Comentário</button>
+<form id="comentarioForm" onsubmit="adicionarComentario(); return false;">
+  <label for="comentario">Escreva seu comentário:</label><br>
+  <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Digite seu comentário aqui"></textarea><br>
+  <button type="submit">Enviar</button>
 </form>
-</div>
-</body>
-</html>
-</style>
+
+<div id="comentarios"></div>
+
+<script>
+function adicionarComentario() {
+  const comentario = document.getElementById("comentario").value;
+  if (comentario.trim()) {
+    const comentarioDiv = document.createElement("div");
+    comentarioDiv.textContent = comentario;
+    document.getElementById("comentarios").appendChild(comentarioDiv);
+    document.getElementById("comentarioForm").reset(); // Limpa o campo de comentário
+  }
+}
+</script>
+
 
 
