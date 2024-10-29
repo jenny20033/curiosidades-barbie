@@ -760,8 +760,10 @@ Por: Jennyfer
 </head>
 <body>
 <form id="comentarioForm" onsubmit="adicionarComentario(); return false;">
+     <label for="nome">Seu Nome:</label>
+    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"><br>
   <label for="comentario">Escreva seu comentário:</label><br>
-  <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Digite seu comentário aqui"></textarea><br>
+  <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Deixe seu comentário"></textarea><br>
   <button type="submit">Enviar</button>
 </form>
 
