@@ -716,4 +716,123 @@ Por: Jennyfer
         crossorigin="anonymous"
         async>
 </script>
+
+
+
     
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Comentários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="comentarios-container">
+        <h2>Deixe seu comentário:</h2>
+        <textarea id="comentario" placeholder="Escreva seu comentário..."></textarea>
+        <button id="btn-comentar">Comentar</button>
+
+        <div id="comentarios-lista">
+            <!-- Comentários serão inseridos aqui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.comentarios-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#comentarios-lista {
+    margin-top: 20px;
+}
+
+.comentario-item {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+        // script.js
+
+// Função para carregar os comentários salvos no localStorage
+function carregarComentarios() {
+    const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+    const listaComentarios = document.getElementById('comentarios-lista');
+    listaComentarios.innerHTML = ''; // Limpar a lista antes de repovoar
+
+    comentarios.forEach(comentario => {
+        const divComentario = document.createElement('div');
+        divComentario.classList.add('comentario-item');
+        divComentario.textContent = comentario;
+        listaComentarios.appendChild(divComentario);
+    });
+}
+
+// Função para adicionar um novo comentário
+function adicionarComentario() {
+    const comentarioInput = document.getElementById('comentario');
+    const novoComentario = comentarioInput.value.trim();
+
+    if (novoComentario) {
+        const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentarios.push(novoComentario);
+        localStorage.setItem('comentarios', JSON.stringify(comentarios));
+        comentarioInput.value = ''; // Limpar a caixa de texto
+        carregarComentarios(); // Atualizar a lista de comentários
+    }
+}
+
+// Adicionar o evento de clique no botão de comentar
+document.getElementById('btn-comentar').addEventListener('click', adicionarComentario);
+
+// Carregar os comentários ao abrir a página
+window.onload = carregarComentarios;
+
+            
+     
