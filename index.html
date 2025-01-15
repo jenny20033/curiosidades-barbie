@@ -11,49 +11,32 @@
 
 }
                
-* Reseta os estilos padrões */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Corpo e fontes */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    position: relative;
-
-}
-
-/* Fundo com animação de cabeças de Barbie */
-.background-animation {
+/* Fundo com cabeças de Barbie */
+body::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Para que o fundo fique atrás do conteúdo */
-    background-image: url('barbie-head1.png') /* Substitua pelos caminhos das suas imagens */
+    background-image: url('barbie-head1.png'); /* Substitua pelos caminhos das suas imagens */
     background-repeat: no-repeat;
     background-size: 100px 100px; /* Ajuste o tamanho das imagens */
-    animation: moveHeads 20s linear infinite;
+    animation: moveBackground 10s linear infinite;
+    z-index: -1;
 }
 
-/* Animação para mover as imagens no fundo */
-@keyframes moveHeads {
+/* Animação para o fundo */
+@keyframes moveBackground {
     0% {
-        background-position: 0% 0%, 100% 100%;
-    }
-    50% {
-        background-position: 100% 100%, 0% 0%;
+        background-position: 0% 0%;
     }
     100% {
-        background-position: 0% 0%, 100% 100%;
+        background-position: 100% 100%;
     }
 }
+
 
 
 
