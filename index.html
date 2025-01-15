@@ -7,52 +7,55 @@
 
         <style>
 
-    /* Estilo base */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 10px;
-    }
+    <style>
 
-    /* Layout flexível com Flexbox */
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 1em;
-    }
+  /* Estilo base */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
 
-    /* Itens da grade flexível */
+  /* Layout flexível com Flexbox */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  /* Itens da grade flexível */
+  .item {
+    background-color: #f4f4f4;
+    margin: 0.5em;
+    padding: 1em;
+    flex: 1 1 calc(33.333% - 1em);
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 300px; /* Adicionado para evitar excesso de largura */
+  }
+
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Media Queries para diferentes tamanhos de tela */
+  @media (max-width: 768px) {
     .item {
-      background-color: #f4f4f4;
-      margin: 0.5em;
-      padding: 1em;
-      flex: 1 1 calc(33.333% - 1em);
-      box-sizing: border-box;
-      text-align: center;
+      flex: 1 1 calc(50% - 1em);
+      max-width: 100%; /* Garantir que o conteúdo preencha o espaço disponível */
     }
+  }
 
-    /* Imagens responsivas */
-    img {
-      max-width: 100%;
-      height: auto;
+  @media (max-width: 480px) {
+    .item {
+      flex: 1 1 100%;
+      max-width: 100%; /* Garantir alinhamento em telas pequenas */
     }
-
-    /* Media Queries para diferentes tamanhos de tela */
-    @media (max-width: 768px) {
-      .item {
-        flex: 1 1 calc(50% - 1em);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .item {
-        flex: 1 1 100%;
-      }
-    }
-  </style>
-</head>
-<body>
+  }
+</style>
 
 
 
