@@ -6,6 +6,16 @@
         <tittle></tittle>
 
 <style>
+ /* Itens da grade flexível */
+  .item {
+    background-color: #f4f4f4;
+    margin: 0.5em;
+    padding: 1em;
+    flex: 1 1 calc(33.333% - 1em);
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 300px; /* Adicionado para evitar excesso de largura */
+    
 /* Media Queries para diferentes tamanhos de tela */
   @media (max-width: 768px) {
     .item {
