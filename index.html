@@ -10,55 +10,40 @@
               }
                 </style>
 
-         <style>
-        body {
-            margin: 0;
+       <body>
+    <!-- Animação de cabeça da Barbie como fundo -->
+    <div class="barbie-background">
+        <img src="barbie-head2.png" alt="Cabeça da Barbie" class="barbie-animation">
+    </div>
+           <style>
+        .barbie-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
-            height: 100vh;
-            background-color: #f0f0f0;
+            z-index: -1;
         }
 
-        .flutuante {
+        .barbie-animation {
             position: absolute;
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-            animation: flutuar 10s infinite ease-in-out;
+            width: 150px;
+            height: 150px;
+            animation: float 5s infinite;
         }
 
-        @keyframes flutuar {
-            0% {
-                top: 0;
-                left: 0;
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                top: 90%;
-                left: 50%;
-                transform: translateY(-50px) rotate(180deg);
-            }
-            100% {
-                top: 0;
-                left: 100%;
-                transform: translateY(0) rotate(360deg);
-            }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
         }
-
-        .barbie1 { background-image: url('barbie-head2.png'); }
-        .barbie2 { background-image: url('barbie-head2.png'); }
-        .barbie3 { background-image: url('barbie-head2.png'); }
-        .barbie4 { background-image: url('barbie-head2.png'); }
     </style>
-</head>
-<body>
-
-    <div class="flutuante barbie1"></div>
-    <div class="flutuante barbie2"></div>
-    <div class="flutuante barbie3"></div>
-    <div class="flutuante barbie4"></div>
-
 </body>
 </html>
+              
+
+
              
          
 
