@@ -10,6 +10,41 @@
               }
 
                 
+                <body>
+    <!-- Animação de cabeça da Barbie como fundo -->
+    <div class="barbie-background">
+        <img src="barbie-head1.png" alt="Cabeça da Barbie" class="barbie-animation">
+    </div>
+ <style>
+        .barbie-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .barbie-animation {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            animation: float 5s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</body>
+</html>
+
+
+
+                
             h1,h2
             h2{
                 color:#000000;
