@@ -32,7 +32,20 @@
 }
 
 
-     </style>      
+     </style>    
+         <script>  
+window.addEventListener('scroll', function() {
+    const leftHead = document.querySelector('.left');
+    const rightHead = document.querySelector('.right');
+
+    const scrollY = window.scrollY;
+
+    // Movimentação das cabeças com base no rolar da página
+    leftHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
+    rightHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
+});
+
+   </script>
         
         
 
@@ -825,19 +838,7 @@ Por: Jennyfer
 </head>
 
          
-   <script>  
-window.addEventListener('scroll', function() {
-    const leftHead = document.querySelector('.left');
-    const rightHead = document.querySelector('.right');
-
-    const scrollY = window.scrollY;
-
-    // Movimentação das cabeças com base no rolar da página
-    leftHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
-    rightHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
-});
-
-   </script>
+  
    
 
 
