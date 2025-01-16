@@ -8,9 +8,48 @@
             <style>
           body{background: linear-gradient(to right,#87CEFA,#EE82EE);
               }
-                </style>
+                .head {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.1s ease; /* Animação suave */
+}
 
+.left {
+    left: 10%;
+    background-image: url('caminho/para/sua-imagem-da-cabeca.png'); /* Substitua com o caminho da imagem */
+}
+
+.right {
+    right: 10%;
+    background-image: url('caminho/para/sua-imagem-da-cabeca.png'); /* Substitua com o caminho da imagem */
+}
+
+                </style>
+<script
+        window.addEventListener('scroll', function() {
+    const leftHead = document.querySelector('.left');
+    const rightHead = document.querySelector('.right');
     
+    const scrollY = window.scrollY;
+
+    // Movimenta as cabeças para cima ou para baixo conforme o rolar da página
+    leftHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
+    rightHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
+});
+</script>
+
+
+
+
+
+
+
+        
 
               <style>  
             h1,h2
