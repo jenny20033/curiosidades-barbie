@@ -10,112 +10,30 @@
               }
                 </style>
 
-     
-      <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            position: relative;
-            height: 2090vh; /* Permitindo rolagem vertical */
-            overflow: auto; /* Habilitando rolagem */
-        }
-  
-          
-        .flutuante {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-size: cover;
-            animation: flutuar linear infinite;
-            z-index: 1; /* As cabeças flutuantes ficam atrás do conteúdo */
-        }
+     <style.
+  .head {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('img/barbie-head2.png'); /* Substitua com a URL da imagem da cabeça */
+    background-size: cover;
+    background-position: center;
+}
 
-        @keyframes flutuar {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-50px) rotate(180deg);
-            }
-            100% {
-                transform: translateY(0) rotate(360deg);
-            }
-        }
+.left {
+    left: 10%;
+}
 
-        /* Cabeças com seus respectivos backgrounds e posições */
-        .barbie1 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 5%; top: 5%; }
-        .barbie2 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 15%; top: 10%; }
-        .barbie3 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 25%; top: 15%; }
-        .barbie4 { background-image: url('img/barbie-head2.png');  animation-duration: 15s;left: 35%; top: 20%; }
-        .barbie5 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 45%; top: 25%; }
-        .barbie6 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 55%; top: 30%; }
-        .barbie7 { background-image: url('img/barbie-head2.png');  animation-duration: 15s;left: 65%; top: 35%; }
-        .barbie8 { background-image: url('img/barbie-head2.png');  animation-duration: 15s;left: 75%; top: 40%; }
-        .barbie9 { background-image: url('img/barbie-head2.png');  animation-duration: 15s;left: 85%; top: 45%; }
-        .barbie10 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 95%; top: 50%; }
-        .barbie11 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 10%; top: 55%; }
-        .barbie12 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 20%; top: 60%; }
-        .barbie13 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 30%; top: 65%; }
-        .barbie14 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 40%; top: 70%; }
-        .barbie15 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 50%; top: 75%; }
-        .barbie16 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 60%; top: 80%; }
-        .barbie17 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 70%; top: 85%; }
-        .barbie18 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 80%; top: 90%; }
-        .barbie19 { background-image: url('img/barbie-head2.png');  animation-duration: 15s;left: 90%; top: 95%; }
-        .barbie20 { background-image: url('img/barbie-head2.png');  animation-duration: 15s;left: 5%; top: 95%; }
-        .barbie21 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 15%; top: 90%; }
-        .barbie22 { background-image: url('img/barbie-head2.png''); animation-duration: 15s; left: 25%; top: 85%; }
-        .barbie23 { background-image: url('img/barbie-head2.png');  animation-duration: 15s;left: 35%; top: 80%; }
-        .barbie24 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 45%; top: 75%; }
-        .barbie25 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 55%; top: 70%; }
-        .barbie26 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 65%; top: 65%; }
-        .barbie27 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 75%; top: 60%; }
-        .barbie28 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 85%; top: 55%; }
-        .barbie29 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 95%; top: 50%; }
-        .barbie30 { background-image: url('img/barbie-head2.png'); animation-duration: 15s; left: 5%; top: 45%; }
+.right {
+    right: 10%;
+}
+
+     </style>      
         
-        /* Adicione mais cabeças conforme necessário */
-    </style>
-</head>
-<body>
+        
 
-     <!-- 30 Cabeças flutuantes -->
-    <div class="flutuante barbie1"></div>
-    <div class="flutuante barbie2"></div>
-    <div class="flutuante barbie3"></div>
-    <div class="flutuante barbie4"></div>
-    <div class="flutuante barbie5"></div>
-    <div class="flutuante barbie6"></div>
-    <div class="flutuante barbie7"></div>
-    <div class="flutuante barbie8"></div>
-    <div class="flutuante barbie9"></div>
-    <div class="flutuante barbie10"></div>
-    <div class="flutuante barbie11"></div>
-    <div class="flutuante barbie12"></div>
-    <div class="flutuante barbie13"></div>
-    <div class="flutuante barbie14"></div>
-    <div class="flutuante barbie15"></div>
-    <div class="flutuante barbie16"></div>
-    <div class="flutuante barbie17"></div>
-    <div class="flutuante barbie18"></div>
-    <div class="flutuante barbie19"></div>
-    <div class="flutuante barbie20"></div>
-    <div class="flutuante barbie21"></div>
-    <div class="flutuante barbie22"></div>
-    <div class="flutuante barbie23"></div>
-    <div class="flutuante barbie24"></div>
-    <div class="flutuante barbie25"></div>
-    <div class="flutuante barbie26"></div>
-    <div class="flutuante barbie27"></div>
-    <div class="flutuante barbie28"></div>
-    <div class="flutuante barbie29"></div>
-    <div class="flutuante barbie30"></div>
-    
-    <!-- Adicione mais divs conforme necessário -->
-
-</body>
-</html>
     
               
 
@@ -905,8 +823,18 @@ Por: Jennyfer
 </head>
 
          
-     
+   <script>  
+window.addEventListener('scroll', function() {
+    const leftHead = document.querySelector('.left');
+    const rightHead = document.querySelector('.right');
 
+    const scrollY = window.scrollY;
+
+    // Movimentação das cabeças conforme o rolar da página
+    leftHead.style.transform = `translateY(-50%) translateX(${scrollY * 0.2}px)`;
+    rightHead.style.transform = `translateY(-50%) translateX(-${scrollY * 0.2}px)`;
+});
+   </script>
    
 
 
