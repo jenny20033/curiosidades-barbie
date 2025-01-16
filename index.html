@@ -10,53 +10,7 @@
               }
                 </style>
 
-     <style
-  .head {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100px;
-    height: 100px;
-    background-image: url('img/barbie-head2.png');/* Link direto da imagem */
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.1s ease; /* Para dar uma animação suave */
-}
-
-.left {
-    left: 10%;
-}
-
-.right {
-    right: 10%;
-}
-
-
-     </style>    
-         <script>  
-window.addEventListener('scroll', function() {
-    const leftHead = document.querySelector('.left');
-    const rightHead = document.querySelector('.right');
-
-    const scrollY = window.scrollY;
-
-    // Movimentação das cabeças com base no rolar da página
-    leftHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
-    rightHead.style.transform = `translateY(${scrollY * 0.2 - 50}%)`;
-});
-
-   </script>
-        
-        
-
     
-              
-
-
-             
-         
-
-
 
               <style>  
             h1,h2
