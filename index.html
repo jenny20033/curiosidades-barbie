@@ -9,18 +9,18 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #87CEFA, #EE82EE); /* Seu degradê azul para lilás */
+      background: linear-gradient(to right, #87CEFA, #EE82EE); /* fundo azul-lilás */
       display: flex;
-      justify-content: center; /* Centraliza a .container horizontalmente */
-      height: auto; /* Remove altura fixa que causava rolagem infinita */
+      justify-content: center;
+      height: auto;
     }
 
     .container {
       width: 55%;
       max-width: 5000px;
-      padding: 10px;
+      padding: 20px;
       margin: 20px 0;
-      background-color: #f37ced; /* Caixa rosa */
+      background: linear-gradient(to right, #f37ced, #eea3ff); /* degradê rosa no centro */
       border-radius: 30px;
       box-shadow: 0 4px 8px rgba(170, 1, 119, 0.1);
       text-align: justify;
@@ -35,7 +35,6 @@
       text-transform: uppercase;
     }
 
-    /* Responsividade */
     @media (max-width: 600px) {
       body {
         padding: 10px;
